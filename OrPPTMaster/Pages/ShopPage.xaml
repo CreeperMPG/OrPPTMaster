@@ -1,0 +1,121 @@
+﻿<Page
+    x:Class="OrPPTMaster.Pages.ShopPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OrPPTMaster.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush ImageSource="/Assets/HomeBackground.jpg" Stretch="UniformToFill"/>
+    </Page.Background>
+
+    <Grid>
+        <Border Background="White" CornerRadius="10" Opacity="0.5" HorizontalAlignment="Left" Margin="20" Width="50">
+            <Grid>
+                <FontIcon Glyph="&#xE719;" Margin="0, 10, 0, 0" VerticalAlignment="Top"/>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 10" MaxWidth="40">
+                    <Button Background="{x:Null}" x:Name="BackButton" Click="BackButton_Click" BorderThickness="0" HorizontalAlignment="Center" ToolTipService.ToolTip="返回">
+                        <Button.Content>
+                            <SymbolIcon Symbol="Back"/>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <TextBlock Text="商城" FontSize="25" Margin="100, 25, 0, 0" FontFamily="等线"/>
+        <StackPanel Margin="80, 50, 0, 20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Margin="20" Grid.Column="0">
+                    <Border Background="White" CornerRadius="10">
+                        <Grid>
+                            <Image Source="/Assets/RLCraft.jpg" Opacity="0.5"/>
+                            <TextBlock Text="RLCraft" Margin="10, 10, 0, 0" FontFamily="等线 Bold" FontSize="30"/>
+                            <TextBlock Text="原著 29MB 实际 48.9MB" Margin="10, 50, 0, 0" FontFamily="等线 Bold" Opacity="0.5"/>
+                            <Button HorizontalAlignment="Left" Click="DownloadButton_Click" VerticalAlignment="Top" Margin="10, 70, 0, 0" Content="下载"/>
+                            <TextBlock Text="https://www.mcmod.cn/modpack/16.html" FontSize="8" IsTextSelectionEnabled="True" VerticalAlignment="Bottom" Margin="10, 0, 0, 10" FontFamily="等线" Opacity="0.2"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Grid Margin="20" Grid.Column="1">
+                    <Border Background="White" CornerRadius="10">
+                        <Grid>
+                            <Image Source="/Assets/JEI.jpg" Opacity="0.5"/>
+                            <TextBlock Text="JEI 物品管理器" Margin="10, 10, 0, 0" FontFamily="等线 Bold" FontSize="30"/>
+                            <TextBlock Text="原著 42MB 实际 1.1MB" Margin="10, 50, 0, 0" FontFamily="等线 Bold" Opacity="0.5"/>
+                            <Button HorizontalAlignment="Left" Click="DownloadButton_Click" VerticalAlignment="Top" Margin="10, 70, 0, 0" Content="下载"/>
+                            <TextBlock Text="https://www.mcmod.cn/modpack/459.html" FontSize="8" IsTextSelectionEnabled="True" VerticalAlignment="Bottom" Margin="10, 0, 0, 10" FontFamily="等线" Opacity="0.2"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Grid Margin="20" Grid.Column="2">
+                    <Border Background="White" CornerRadius="10">
+                        <Grid>
+                            <Image Source="/Assets/SkinLantern.jpg" Opacity="0.5"/>
+                            <TextBlock Text="灯笼皮肤" Margin="10, 10, 0, 0" FontFamily="等线 Bold" FontSize="30"/>
+                            <TextBlock Text="原著 384KB 实际 843KB(怎么这么巧)" Margin="10, 50, 0, 0" FontFamily="等线 Bold" Opacity="0.5"/>
+                            <Button HorizontalAlignment="Left" Click="DownloadButton_Click" VerticalAlignment="Top" Margin="10, 70, 0, 0" Content="下载"/>
+                            <TextBlock Text="https://www.mcmod.cn/modpack/4666.html" FontSize="8" IsTextSelectionEnabled="True" VerticalAlignment="Bottom" Margin="10, 0, 0, 10" FontFamily="等线" Opacity="0.2"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Margin="20" Height="50" Grid.Column="0">
+                    <Border Background="White" CornerRadius="10" Opacity="0.5">
+                        <Grid>
+                            <TextBlock VerticalAlignment="Center" Text="地图" FontFamily="等线 Bold" FontSize="20" Margin="10"/>
+                            <FontIcon Glyph="&#xE707;" HorizontalAlignment="Right" Margin="0, 0, 20, 0"/>
+                        </Grid>
+                    </Border>
+                    <Button Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Button.Flyout>
+                            <Flyout>
+                                <TextBlock Text="小地图模组 https://www.mcmod.cn/class/1701.html（答非所问.exe" FontFamily="等线" IsTextSelectionEnabled="True" />
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                </Grid>
+                <Grid Margin="20" Height="50" Grid.Column="1">
+                    <Border Background="White" CornerRadius="10" Opacity="0.5">
+                        <Grid>
+                            <TextBlock VerticalAlignment="Center" Text="光影模组" FontFamily="等线 Bold" FontSize="20" Margin="10"/>
+                            <FontIcon Glyph="&#xE74C;" HorizontalAlignment="Right" Margin="0, 0, 20, 0"/>
+                        </Grid>
+                    </Border>
+                    <Button Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Button.Flyout>
+                            <Flyout>
+                                <TextBlock Text="如果你真的想要光影模组的话，何必在这里找呢？" FontFamily="等线" />
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Margin="20, 0, 20, 0" Height="50">
+                <Border Background="White" CornerRadius="10" Opacity="0.5">
+                    <Grid>
+                        <TextBlock VerticalAlignment="Center" Text="皮肤" FontFamily="等线 Bold" FontSize="20" Margin="10"/>
+                        <FontIcon Glyph="&#xE748;" HorizontalAlignment="Right" Margin="0, 0, 20, 0"/>
+                    </Grid>
+                </Border>
+                <Button Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Button.Flyout>
+                        <Flyout>
+                            <TextBlock Text="PowerPoint 正在启动（假的" FontFamily="等线" />
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>

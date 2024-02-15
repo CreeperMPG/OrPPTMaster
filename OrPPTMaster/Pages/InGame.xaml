@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="OrPPTMaster.Pages.InGame"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OrPPTMaster.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="20" VerticalAlignment="Top" Spacing="10">
+            <Button x:Name="BackButton" Click="BackButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Button.Content>
+                    <SymbolIcon Symbol="Back"/>
+                </Button.Content>
+            </Button>
+            <TextBlock Text="我的世界" FontSize="18" VerticalAlignment="Center" FontFamily="等线 Bold"/>
+        </StackPanel>
+        <MediaPlayerElement Source="https://vdse.bdstatic.com/192d9a98d782d9c74c96f09db9378d93.mp4" Margin="0, 70, 0, 0" x:Name="Rickroll" AutoPlay="True"/>
+    </Grid>
+</Page>
